@@ -87,3 +87,7 @@ Ce programme permet de créer un graphe visuel représentant l'appariement entre
       ii. Si l'animal préfère son partenaire actuel, il rejette la nouvelle proposition.
 3. Répéter l'étape 2 jusqu'à ce que tous les participants soient appariés.
 4. Retourner l'appariement stable.
+
+## 9. Document de Recherche
+
+Vous pouvez consulter le [Poster de recherche](docs/poster_probleme_mariage_stable.pdf) pour plus d'informations sur la simulation et l'algorithme de Gale et Shapley.
