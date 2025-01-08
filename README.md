@@ -1,6 +1,6 @@
 # Simulation : Refuge Animal
 
-L'objectif de ce projet est de créer un ensemble de données comprenant des familles et des animaux avec des attributs spécifiques, ainsi que des préférences mutuelles entre eux. Ces données sont ensuite utilisées pour simuler un appariement stable entre les familles et les animaux à l'aide de l'algorithme de Gale et Shapley.
+L'objectif est de créer un ensemble de données comprenant des familles et des animaux avec des attributs spécifiques, ainsi que des préférences mutuelles entre eux. Ces données sont ensuite utilisées pour simuler un appariement stable entre les familles et les animaux à l'aide de l'algorithme de Gale et Shapley dans notre projet de recherche : **Problème de mariage stable.**
 
 ## 1. Génération des Familles
 
