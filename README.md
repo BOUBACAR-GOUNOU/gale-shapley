@@ -1,4 +1,12 @@
-# Simulation : Refuge Animal
+# Problème de mariage stable 
+
+Étant donné n hommes et n femmes, chacun ayant établi une liste de préférence ordonnée des
+individus du sexe opposé, l’objectif est de former des couples de manière à ce qu’il n’existe au-
+cune paire (h, f ) d’hommes et de femmes qui préféreraient être ensemble plutôt que de rester
+avec leurs partenaires respectifs. Lorsque cette condition est remplie, on considère que l’en-
+semble des mariages est stable.
+
+## Simulation : Refuge Animal
 
 L'objectif est de créer un ensemble de données comprenant des familles et des animaux avec des attributs spécifiques, ainsi que des préférences mutuelles entre eux. Ces données sont ensuite utilisées pour simuler un appariement stable entre les familles et les animaux à l'aide de l'algorithme de Gale et Shapley dans notre projet de recherche : **Problème de mariage stable.**
 
@@ -117,7 +125,6 @@ Cette mesure reflète le niveau de satisfaction de chaque participant en fonctio
 L'algorithme de Gale-Shapley a une tendance à favoriser légèrement les "proposants" (c'est-à-dire, ceux qui initient la proposition), car en moyenne, les "proposants" finissent par obtenir un partenaire plus proche du sommet de leur liste de préférences que les "répondants". Cela est dû au fait que les "proposants" ont plus d'opportunités de se réajuster tout au long de l'exécution de l'algorithme, tandis que les "répondants" doivent accepter ou rejeter les propositions selon un ordre plus rigide.
 
 En conséquence, le taux de satisfaction moyen des "proposants" est souvent plus élevé que celui des "répondants", ce qui témoigne de cette légère préférence dans l'algorithme de Gale-Shapley.
-
 
 
 ## 6.  Document de Recherche
