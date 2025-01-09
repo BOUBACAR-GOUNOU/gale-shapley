@@ -1,10 +1,7 @@
 # Problème de mariage stable 
 
 Étant donné n hommes et n femmes, chacun ayant établi une liste de préférence ordonnée des
-individus du sexe opposé, l’objectif est de former des couples de manière à ce qu’il n’existe au-
-cune paire (h, f ) d’hommes et de femmes qui préféreraient être ensemble plutôt que de rester
-avec leurs partenaires respectifs. Lorsque cette condition est remplie, on considère que l’en-
-semble des mariages est stable.
+individus du sexe opposé, l’objectif est de former des couples de manière à ce qu’il n’existe aucune paire (h, f ) d’hommes et de femmes qui préféreraient être ensemble plutôt que de rester avec leurs partenaires respectifs. Lorsque cette condition est remplie, on considère que l’ensemble des mariages est stable.
 
 ## Simulation : Refuge Animal
 
