@@ -59,9 +59,19 @@ Une liste de préférences est générée en choisissant un certain nombre de fa
 Ce programme génère les familles et les animaux avec leurs attributs respectifs ainsi que leurs préférences. Les données générées sont ensuite enregistrées sous forme de fichier JSON.
 
 ### `make_appariement.py`
-Ce programme utilise l'algorithme de Gale et Shapley pour effectuer l'appariement entre les familles et les animaux, en fonction des préférences mutuelles. Le résultat de l'appariement est également enregistré dans un fichier JSON. 
+Ce programme utilise l'algorithme de Gale et Shapley pour effectuer l'appariement entre les familles et les animaux, en fonction des préférences mutuelles. Le résultat de l'appariement est également enregistré dans un fichier JSON.
 
-#### Algorithme de Gale et Shapley
+### `make_graphe.py`
+Ce programme permet de créer un graphe visuel représentant l'appariement entre les familles et les animaux. Chaque famille et chaque animal sont représentés par un nœud, et les arêtes entre eux montrent l'appariement stable obtenu par l'algorithme de Gale et Shapley.
+
+### `stable_matching.py` 
+Ce programme combine **make_preference.py** et **make_appariement.py**
+
+### `taux_satisfaction.py`
+Ce programme charge des données de préférences et d'appariements depuis des fichiers JSON, puis calcule la satisfaction moyenne des familles et des animaux en fonction de leurs positions dans les préférences. Ensuite, il génère un graphique à barres montrant ces taux de satisfaction.
+**Le calcule de taux de satisfaction (voir le point 5).**
+
+## 5. Algorithme de Gale et Shapley
 L'algorithme de Gale et Shapley est un algorithme permettant de trouver un appariement stable entre deux ensembles de participants. Dans le cadre de ce projet, il permet d'apparier des familles et des animaux en fonction de leurs préférences respectives.
 
 Une **paire instable** se produit lorsqu'il existe deux participants, un de chaque côté, qui préfèrent être appariés entre eux plutôt que d'être appariés avec leurs partenaires actuels. L'algorithme cherche à éliminer ces instabilités.
@@ -71,24 +81,45 @@ Une **paire instable** se produit lorsqu'il existe deux participants, un de chaq
 - Animal X préfère la Famille A à sa partenaire actuelle Famille B.
 
 Dans ce cas, la paire (Famille A, Animal X) constitue une paire instable.
+### Pseudo-Code de l'Algorithme de Gale et Shapley
 
-### `make_graphe.py`
-Ce programme permet de créer un graphe visuel représentant l'appariement entre les familles et les animaux. Chaque famille et chaque animal sont représentés par un nœud, et les arêtes entre eux montrent l'appariement stable obtenu par l'algorithme de Gale et Shapley.
+**Entrée** : `n` hommes et `n` femmes, chacun avec une liste de préférences.  
+**Sortie** : Un ensemble de mariages stables.
 
-## 5. Pseudo-Code de l'Algorithme de Gale et Shapley
+1. Initialiser chaque homme et chaque femme comme étant célibataire.
+2. Tant qu’il existe un homme célibataire qui n’a pas encore proposé à toutes les femmes :
+   1. Sélectionner un tel homme `h`.
+   2. `f` ← la femme préférée de `h` parmi celles à qui il n’a pas encore proposé.
+   3. Si `f` est célibataire :
+      - `h` et `f` se fiancent.
+   4. Sinon :
+      - Comparer `h` avec le fiancé actuel `h'` de `f`.
+      - Si `f` préfère `h` à `h'` :
+        - `h` et `f` se fiancent, et `h'` redevient célibataire.
+      - Sinon :
+        - `h` reste célibataire.
+3. Retourner l’ensemble des couples formés.
 
-```text
-1. Initialiser tous les participants (familles et animaux) comme non appariés.
-2. Tant qu'il existe des familles non appariées :
-   a. Une famille non appariée propose à son premier choix d'animal.
-   b. Si l'animal n'est pas apparié, il accepte la proposition.
-   c. Si l'animal est déjà apparié, il compare son partenaire actuel avec la famille qui lui a proposé.
-      i. Si l'animal préfère le nouveau prétendant, il rejette son partenaire actuel et accepte la nouvelle proposition.
-      ii. Si l'animal préfère son partenaire actuel, il rejette la nouvelle proposition.
-3. Répéter l'étape 2 jusqu'à ce que tous les participants soient appariés.
-4. Retourner l'appariement stable.
-```
+**Complexité** : polynomiale `O(n^2)`
 
-## 9. Document de Recherche
+## 5. Taux de Satisfaction
+
+L'algorithme de Gale-Shapley, utilisé pour résoudre le problème des mariages stables, peut être analysé sous l'angle du taux de satisfaction des participants. Le taux de satisfaction de chaque participant peut être exprimé par la formule suivante :
+
+**Satisfactionᵢ = (N - positionᵢ + 1) / N × 100%**
+
+où :
+- **N** est le nombre total de choix possibles,
+- **positionᵢ** est le rang du partenaire dans la liste de préférences de i.
+
+Cette mesure reflète le niveau de satisfaction de chaque participant en fonction de sa position dans la liste de préférences de son partenaire. Plus un participant est assigné à un partenaire plus haut dans sa liste, plus sa satisfaction est élevée.
+
+L'algorithme de Gale-Shapley a une tendance à favoriser légèrement les "proposants" (c'est-à-dire, ceux qui initient la proposition), car en moyenne, les "proposants" finissent par obtenir un partenaire plus proche du sommet de leur liste de préférences que les "répondants". Cela est dû au fait que les "proposants" ont plus d'opportunités de se réajuster tout au long de l'exécution de l'algorithme, tandis que les "répondants" doivent accepter ou rejeter les propositions selon un ordre plus rigide.
+
+En conséquence, le taux de satisfaction moyen des "proposants" est souvent plus élevé que celui des "répondants", ce qui témoigne de cette légère préférence dans l'algorithme de Gale-Shapley.
+
+
+
+## 6.  Document de Recherche
 
 Vous pouvez consulter le [Poster de recherche](docs/poster_probleme_mariage_stable.pdf).
