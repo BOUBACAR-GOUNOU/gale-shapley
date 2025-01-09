@@ -126,4 +126,4 @@ En conséquence, le taux de satisfaction moyen des "proposants" est souvent plus
 
 ## 6.  Document de Recherche
 
-Vous pouvez consulter le [Poster de recherche](docs/poster_probleme_mariage_stable.pdf).
+Vous pouvez consulter le [Poster de recherche](docs/poster_G1_probleme_mariage_stable.pdf).
