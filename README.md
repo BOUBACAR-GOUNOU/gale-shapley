@@ -1,5 +1,5 @@
 # R & D : Problème de mariage stable  
-*Poster de présentation [Poster de recherche](docs/poster_G1_probleme_mariage_stable.pdf)*.
+*[Poster de présentation](docs/poster_G1_probleme_mariage_stable.pdf)*.
 
 Étant donné n hommes et n femmes, chacun ayant établi une liste de préférence ordonnée des
 individus du sexe opposé, l’objectif est de former des couples de manière à ce qu’il n’existe aucune paire (h, f ) d’hommes et de femmes qui préféreraient être ensemble plutôt que de rester avec leurs partenaires respectifs. Lorsque cette condition est remplie, on considère que l’ensemble des mariages est stable.
@@ -127,4 +127,4 @@ En conséquence, le taux de satisfaction moyen des "proposants" est souvent plus
 
 ## 6.  Document de Recherche
 
-Vous pouvez consulter le [Poster de recherche](docs/poster_G1_probleme_mariage_stable.pdf).
+Vous pouvez consulter le [Poster de présentation](docs/poster_G1_probleme_mariage_stable.pdf).
