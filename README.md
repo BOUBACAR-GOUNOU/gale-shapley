@@ -107,6 +107,7 @@ Dans ce cas, la paire (Famille A, Animal X) constitue une paire instable.
 3. Retourner l’ensemble des couples formés.
 
 **Complexité** : polynomiale `O(n^2)`
+<img src="docs/preference.png" alt="Texte alternatif" width="300">
 
 ## 5. Taux de Satisfaction
 
